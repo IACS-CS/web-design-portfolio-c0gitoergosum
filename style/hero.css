@@ -7,8 +7,8 @@
   /* Full screen hero section */
   width: 100%;
   min-height: 100dvh;
-  background: #0033a0;
-  color: white;
+  background: #FDF0D5;
+  color: #003049;
   font-family: "Roboto Slab", serif;
   font-size: 30px;
   text-align: center;
@@ -16,7 +16,7 @@
 .hero a {
   color: white;
   text-decoration: underline;
-  text-decoration-color: #c6093b;
+  text-decoration-color: #780000;
 }
 
 /* A little "activation" to demonstrate JS is working in the template */
