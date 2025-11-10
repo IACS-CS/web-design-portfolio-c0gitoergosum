@@ -2,24 +2,46 @@
 
 html {
   /* Make #id links scroll smoothly */
-  scroll-behavior: smooth;
-}
+   <style>
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a45);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
 
-b
-h2 {
-  color: #0033a0;
-  text-decoration: underline;
-  text-decoration-color: #c6093b;
-  margin-bottom: 8px;
-}
-p {
-  margin-top: 0;
-}
+    h1 {
+      font-size: 4rem;
+      background: linear-gradient(90deg, #ff8a00, #e52e71, #9c1aff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255, 90, 200, 0.5);
+      animation: fadeIn 2s ease forwards, float 4s ease-in-out infinite;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
 
-main {
-  min-height: 100dvh;
-  max-width: 35em; 
-  line-height: 1.8; 
-  font-size: 18px; 
-  margin: 0 auto; 
-}
+    h1:hover {
+      letter-spacing: 5px;
+      text-shadow: 0 0 25px rgba(255, 120, 220, 0.9), 0 0 40px rgba(255, 100, 200, 0.7);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
