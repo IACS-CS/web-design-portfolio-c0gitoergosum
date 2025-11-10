@@ -5,18 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  /* Change to something you like, but please do customize the font! */
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  line-height: 1.6;
-  /* reset default margins */
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  /* Customize colors! */
-  background: #f0f0f0;
-  color: #333;
-}
+b
 h2 {
   color: #0033a0;
   text-decoration: underline;
@@ -28,10 +17,9 @@ p {
 }
 
 main {
-  /* Make sure our content can scroll the hero away */
   min-height: 100dvh;
-  max-width: 35em; /* choose a width for text */
-  line-height: 1.8; /* choose a line spacing */
-  font-size: 18px; /* choose a font size */
-  margin: 0 auto; /* center the content */
+  max-width: 35em; 
+  line-height: 1.8; 
+  font-size: 18px; 
+  margin: 0 auto; 
 }
