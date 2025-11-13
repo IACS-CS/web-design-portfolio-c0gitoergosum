@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- Neon Animated Casino Background --- */
+/* --- Elegant Casino Background --- */
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -14,73 +14,50 @@ body {
   margin: 0;
   overflow: hidden;
 
-  /* Animated neon gradient with casino colors */
-  background: linear-gradient(135deg, #1a1a2e, #2e2e50, #ff0040, #00ff80, #ffcc00);
-  background-size: 500% 500%;
-  animation: neonShift 15s ease infinite;
+  /* Dark, rich casino-style background */
+  background: linear-gradient(135deg, #1c1c1c, #2f2f2f, #3a1f1f);
+  color: #fff;
 }
 
-/* --- Neon Gradient Animation --- */
-@keyframes neonShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* --- Glassy Neon Panels for All Text --- */
+/* --- Classic Glassy Panels for Text --- */
 p, h1, h2, h3, h4, h5, h6, span, a {
-  color: #ffffff !important;
-  background: rgba(0, 0, 0, 0.35); /* dark glass effect */
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  color: #fff;
+  background: rgba(30, 30, 30, 0.85); /* dark glass effect */
   padding: 1rem 2.5rem;
   margin: 1rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.3); /* subtle golden border */
   box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.08),
-    0 0 40px rgba(255, 255, 255, 0.05);
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.7),
-    0 0 20px rgba(255, 255, 255, 0.4),
-    0 0 40px rgba(255, 255, 255, 0.2);
-  transition: all 0.4s ease;
-  animation: fadeIn 2s ease forwards, float 4s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 0 5px rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-/* --- Hover effects for interactive casino vibe --- */
+/* --- Hover Effects --- */
 p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, span:hover, a:hover {
-  transform: scale(1.08);
+  transform: scale(1.03);
   box-shadow:
-    0 0 30px rgba(255, 255, 255, 0.3),
-    0 0 60px rgba(255, 255, 255, 0.15),
-    0 0 50px rgba(255, 215, 0, 0.4); /* golden casino glow */
+    0 4px 20px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(255, 215, 0, 0.3); /* subtle golden glow */
 }
 
-/* --- Animations --- */
+/* --- Fade-In and Float Animations --- */
 @keyframes fadeIn {
   to { opacity: 1; }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-5px); }
 }
 
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.6),
-      0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    text-shadow:
-      0 0 20px rgba(255, 255, 255, 1),
-      0 0 40px rgba(255, 215, 0, 0.6);
-  }
+p, h1, h2, h3, h4, h5, h6, span, a {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards, float 4s ease-in-out infinite;
 }
 
-/* --- Floating Neon Poker Chips --- */
+/* --- Subtle Background Elements: Poker Chips --- */
 body::before {
   content: "";
   position: fixed;
@@ -89,9 +66,9 @@ body::before {
   top: -100%;
   left: -100%;
   background-image:
-    radial-gradient(circle, rgba(255,0,0,0.08) 0%, transparent 30%),
-    radial-gradient(circle, rgba(0,255,0,0.08) 0%, transparent 30%),
-    radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 50%);
+    radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle, rgba(255, 0, 0, 0.03) 0%, transparent 40%),
+    radial-gradient(circle, rgba(0, 128, 0, 0.03) 0%, transparent 40%);
   background-repeat: repeat;
   animation: chipsMove 60s linear infinite;
   pointer-events: none;
@@ -100,9 +77,8 @@ body::before {
 
 @keyframes chipsMove {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(-50px, 50px); }
+  100% { transform: translate(-20px, 20px); }
 }
 
-.h1-casino { color: #ff0040; }   /* red */
-.h2-casino { color: #00ff80; }   /* green */
-.h3-casino { color: #ffcc00; }   /* gold */
+/* --- Opt*
+
