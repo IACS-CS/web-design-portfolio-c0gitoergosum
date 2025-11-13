@@ -1,26 +1,108 @@
-/* Hero section */
-
-/* A little "activation" to demonstrate JS is working in the template */
-.hero {
-  transition: background 0.5s;
-}
-.hero.active {
-  background: #c6093b;
-}
-.hero.active a {
-  color: white;
-  text-decoration-color: #0033a0;
+/* --- Smooth scrolling --- */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (max-width: 800px) {
-  .hero {
-    font-size: 45px;
+/* --- Neon Animated Casino Background --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+
+  /* Animated neon gradient with casino colors */
+  background: linear-gradient(135deg, #1a1a2e, #2e2e50, #ff0040, #00ff80, #ffcc00);
+  background-size: 500% 500%;
+  animation: neonShift 15s ease infinite;
+}
+
+/* --- Neon Gradient Animation --- */
+@keyframes neonShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Glassy Neon Panels for All Text --- */
+p, h1, h2, h3, h4, h5, h6, span, a {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.35); /* dark glass effect */
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  padding: 1rem 2.5rem;
+  margin: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.08),
+    0 0 40px rgba(255, 255, 255, 0.05);
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  animation: fadeIn 2s ease forwards, float 4s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+}
+
+/* --- Hover effects for interactive casino vibe --- */
+p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, span:hover, a:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.3),
+    0 0 60px rgba(255, 255, 255, 0.15),
+    0 0 50px rgba(255, 215, 0, 0.4); /* golden casino glow */
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 255, 255, 1),
+      0 0 40px rgba(255, 215, 0, 0.6);
   }
 }
 
-@media (min-width: 801px) {
-  .hero {
-    font-size: 75px;
-  }
+/* --- Floating Neon Poker Chips --- */
+body::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  background-image:
+    radial-gradient(circle, rgba(255,0,0,0.08) 0%, transparent 30%),
+    radial-gradient(circle, rgba(0,255,0,0.08) 0%, transparent 30%),
+    radial-gradient(circle, rgba(255,215,0,0.05) 0%, transparent 50%);
+  background-repeat: repeat;
+  animation: chipsMove 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
 }
-/* what is this diddy blud doing on the codespace */
+
+@keyframes chipsMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, 50px); }
+}
+
+.h1-casino { color: #ff0040; }   /* red */
+.h2-casino { color: #00ff80; }   /* green */
+.h3-casino { color: #ffcc00; }   /* gold */
